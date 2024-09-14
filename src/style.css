@@ -1,0 +1,24 @@
+:root {
+  --color-primary: #ff0000;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body * {
+  box-sizing: inherit;
+}
+
+#cytus {
+  width: 100%;
+  height: 100%;
+}
