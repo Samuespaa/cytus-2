@@ -1,3 +1,8 @@
+@font-face {
+  font-family: American Kestrel;
+  src: url("../src/assets/fonts/American-kestrel-semistraight.ttf");
+}
+
 :root {
   --color-primary: #ff0000;
   --color-background-outside: #000000;

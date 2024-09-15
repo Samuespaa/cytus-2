@@ -1,5 +1,12 @@
 {
   "generic": {
-    "loading": "Cargando"
+    "ok": "Vale"
+  },
+  "loading": {
+    "useHeadphones": "Usa auriculares para la mejor experiencia.",
+    "notice": {
+      "recreation": "Esta es una recreación de la interfaz del videojuego Cytus II con tecnologías web.",
+      "rayark": "El juego original pertenece a Rayark Games."
+    }
   }
 }
