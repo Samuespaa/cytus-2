@@ -1,17 +1,25 @@
 :root {
   --color-primary: #ff0000;
+  --color-background-outside: #000000;
+  --color-text: #ffffff;
 }
 
 html {
   width: 100%;
   height: 100%;
+  background-color: var(--color-background-outside);
+  color: var(--color-text);
 }
 
 body {
+  box-sizing: border-box;
   width: 100%;
   height: 100%;
   margin: 0;
-  box-sizing: border-box;
+  font-family: "Electrolize", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  user-select: none;
 }
 
 body * {
@@ -19,6 +27,9 @@ body * {
 }
 
 #cytus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 100%;
 }
