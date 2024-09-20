@@ -10,11 +10,24 @@
     <div class="loading-notice">
       <span class="loading-notice-text">{{ $t('loading.notice.recreation') }}</span>
       <span class="loading-notice-text">{{ $t('loading.notice.rayark') }}</span>
+      <Button :text="$t('generic.ok')" @click="accept" />
     </div>
   </div>
 </template>
 
-<script setup></script>
+<script setup lang="ts">
+import { useRouter } from 'vue-router';
+import Button from '../components/Button.vue';
+import AnimationUtils from '../utils/AnimationUtils';
+
+const router = useRouter();
+
+async function accept(): Promise<void> {
+  AnimationUtils.getElement('.loading').style.opacity = '0';
+  await AnimationUtils.delay(500);
+  router.push('/title');
+}
+</script>
 
 <style scoped lang="scss">
 .loading {
@@ -24,6 +37,7 @@
   position: relative;
   width: 100%;
   height: 100%;
+  transition-duration: 0.5s;
   &-headphones {
     display: flex;
     justify-content: center;
@@ -40,7 +54,9 @@
       height: 9.0625rem;
     }
     &-text {
+      color: var(--color-text-white);
       font-size: 2.75rem;
+      text-shadow: none;
     }
   }
   &-wildsoft {
@@ -51,8 +67,10 @@
     animation-fill-mode: forwards;
     opacity: 0;
     &-icon {
+      color: var(--color-text-white);
       font-family: American Kestrel;
       font-size: 6rem;
+      text-shadow: none;
     }
   }
   &-notice {
@@ -68,7 +86,9 @@
     animation-fill-mode: forwards;
     opacity: 0;
     &-text {
+      color: var(--color-text-white);
       font-size: 2.75rem;
+      text-shadow: none;
     }
   }
 }
