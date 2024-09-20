@@ -3,12 +3,42 @@
   src: url("../src/assets/fonts/American-kestrel-semistraight.ttf");
 }
 
+@keyframes showAndHide {
+  0% {
+    opacity: 0;
+  }
+
+  25% {
+    opacity: 1;
+  }
+
+  75% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
 :root {
   --color-primary: #ff0000;
   --color-background-outside: #000000;
   --color-text: #f3ebc7;
   --color-text-white: #ffffff;
   --color-button-background: #f3ebc719;
+  --color-loading-border: #00000029;
+  --color-loading-background: #ffffff26;
 }
 
 html {

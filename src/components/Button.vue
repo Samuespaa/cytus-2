@@ -33,7 +33,7 @@ function sound(): void {
   column-gap: 1.5rem;
   min-width: 20rem;
   padding: 2rem 2.5rem;
-  border: 1px solid var(--color-text);
+  border: 0.0625rem solid var(--color-text);
   border-radius: 0.5rem;
   background-color: var(--color-button-background);
   cursor: pointer;
@@ -43,7 +43,7 @@ function sound(): void {
   }
   &-text {
     font-size: 2rem;
-    letter-spacing: 1px;
+    letter-spacing: 0.0625rem;
   }
 }
 </style>

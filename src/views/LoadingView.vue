@@ -7,7 +7,7 @@
     <div class="loading-wildsoft">
       <span class="loading-wildsoft-icon">Wildsoft</span>
     </div>
-    <div class="loading-notice">
+    <div class="loading-notice" v-if="showNotice">
       <span class="loading-notice-text">{{ $t('loading.notice.recreation') }}</span>
       <span class="loading-notice-text">{{ $t('loading.notice.rayark') }}</span>
       <Button :text="$t('generic.ok')" @click="accept" />
@@ -16,15 +16,22 @@
 </template>
 
 <script setup lang="ts">
+import { onMounted, ref } from 'vue';
 import { useRouter } from 'vue-router';
 import Button from '../components/Button.vue';
 import AnimationUtils from '../utils/AnimationUtils';
 
 const router = useRouter();
+const showNotice = ref(false);
+
+onMounted(async () => {
+  await AnimationUtils.delay(9000);
+  showNotice.value = true;
+});
 
 async function accept(): Promise<void> {
   AnimationUtils.getElement('.loading').style.opacity = '0';
-  await AnimationUtils.delay(500);
+  await AnimationUtils.delay(1000);
   router.push('/title');
 }
 </script>
@@ -82,7 +89,6 @@ async function accept(): Promise<void> {
     position: absolute;
     animation-name: show;
     animation-duration: 1s;
-    animation-delay: 9s;
     animation-fill-mode: forwards;
     opacity: 0;
     &-text {
@@ -90,30 +96,6 @@ async function accept(): Promise<void> {
       font-size: 2.75rem;
       text-shadow: none;
     }
-  }
-}
-
-@keyframes showAndHide {
-  0% {
-    opacity: 0;
-  }
-  25% {
-    opacity: 1;
-  }
-  75% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-@keyframes show {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
   }
 }
 </style>
