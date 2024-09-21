@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import LoadingView from '../views/LoadingView.vue';
-import Button from '../components/Button.vue';
+import TitleView from '../views/TitleView.vue';
 
 const routes = [
   {
@@ -11,7 +11,7 @@ const routes = [
   {
     path: '/title',
     name: 'Title',
-    component: Button,
+    component: TitleView,
   },
   {
     path: '/:pathMatch(.*)*',
