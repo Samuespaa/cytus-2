@@ -14,8 +14,8 @@
       <div class="loading-box-corner down left"></div>
       <div class="loading-box-corner up left"></div>
     </div>
-    <img class="loading-circle-exterior" src="../assets/images/loading-circle-exterior.svg" />
-    <img class="loading-circle-interior" src="../assets/images/loading-circle-interior.svg" />
+    <img class="loading-circle-exterior" src="../assets/images/loading/loading-circle-exterior.svg" />
+    <img class="loading-circle-interior" src="../assets/images/loading/loading-circle-interior.svg" />
     <span class="loading-text">{{ $t('generic.loading').toUpperCase() }}</span>
   </div>
 </template>

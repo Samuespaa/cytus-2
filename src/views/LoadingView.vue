@@ -1,7 +1,7 @@
 <template>
   <div class="loading">
     <div class="loading-headphones">
-      <img class="loading-headphones-icon" src="../assets/images/headphones.png" />
+      <img class="loading-headphones-icon" src="../assets/images/loading/headphones.png" />
       <span class="loading-headphones-text">{{ $t('loading.useHeadphones') }}</span>
     </div>
     <div class="loading-wildsoft">

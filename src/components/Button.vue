@@ -1,12 +1,12 @@
 <template>
   <div class="button" @click="sound">
-    <img class="button-icon" v-if="icon === 'calibration'" src="../assets/images/calibration.svg" />
+    <img class="button-icon" v-if="icon === 'calibration'" src="../assets/images/button/calibration.svg" />
     <span class="button-text" v-if="text">{{ text }}</span>
   </div>
 </template>
 
 <script setup lang="ts">
-import buttonSound from '../assets/audios/sounds/button.mp3';
+import acceptSound from '../assets/audios/sounds/accept.mp3';
 
 defineProps({
   icon: {
@@ -20,8 +20,7 @@ defineProps({
 });
 
 function sound(): void {
-  const audio = new Audio(buttonSound);
-  audio.play();
+  new Audio(acceptSound).play();
 }
 </script>
 
