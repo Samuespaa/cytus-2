@@ -9,31 +9,21 @@
 
 <script setup lang="ts">
 import { onMounted, ref } from 'vue';
-import titleBegin from '../assets/audios/musics/title-begin.mp3';
-import title from '../assets/audios/musics/title.mp3';
 import Loading from '../components/Loading.vue';
+import Musics from '../constants/Musics';
+import MusicService from '../services/MusicService';
 import AnimationUtils from '../utils/AnimationUtils';
 
 const enableStart = ref(false);
 
 onMounted(async () => {
-  await AnimationUtils.delay(3000);
-  startTitleBeginMusic();
   await AnimationUtils.delay(4000);
-  startTitleMusic();
+  MusicService.playMusic(Musics.TITLE_BEGIN, false);
+  await AnimationUtils.delay(4000);
+  MusicService.playMusic(Musics.TITLE);
   await AnimationUtils.delay(10000);
   enableStart.value = true;
 });
-
-function startTitleBeginMusic(): void {
-  new Audio(titleBegin).play();
-}
-
-function startTitleMusic(): void {
-  const music = new Audio(title);
-  music.loop = true;
-  music.play();
-}
 </script>
 
 <style scoped lang="scss">

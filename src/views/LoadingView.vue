@@ -19,13 +19,15 @@
 import { onMounted, ref } from 'vue';
 import { useRouter } from 'vue-router';
 import Button from '../components/Button.vue';
+import MusicService from '../services/MusicService';
 import AnimationUtils from '../utils/AnimationUtils';
 
 const router = useRouter();
 const showNotice = ref(false);
 
 onMounted(async () => {
-  await AnimationUtils.delay(9000);
+  MusicService.stopAll();
+  await AnimationUtils.delay(9500);
   showNotice.value = true;
 });
 

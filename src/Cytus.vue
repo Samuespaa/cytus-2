@@ -7,6 +7,7 @@
 <script setup lang="ts">
 import { onMounted, onUnmounted } from 'vue';
 import { useI18n } from 'vue-i18n';
+import MusicService from './services/MusicService';
 
 const BASE_WIDTH: number = 1920;
 const BASE_HEIGHT: number = 904;
@@ -16,10 +17,12 @@ onMounted(() => {
   window.addEventListener('resize', calculateContainerSize);
   calculateContainerSize();
   detectLanguage();
+  MusicService.initialize();
 });
 
 onUnmounted(() => {
   window.removeEventListener('resize', calculateContainerSize);
+  MusicService.stopAll();
 });
 
 function calculateContainerSize(): void {
