@@ -64,6 +64,7 @@ function detectLanguage(): void {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
   background-color: var(--color-background-outside);
 }
 </style>

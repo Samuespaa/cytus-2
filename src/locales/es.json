@@ -9,5 +9,8 @@
       "recreation": "Esta es una recreación de la interfaz del videojuego Cytus II con tecnologías web.",
       "rayark": "El juego original pertenece a Rayark Games."
     }
+  },
+  "title": {
+    "touchStart": "Toca la pantalla para comenzar"
   }
 }

@@ -9,5 +9,8 @@
       "recreation": "This is a recreation of the Cytus II videogame interface with web technologies.",
       "rayark": "The original game belongs to Rayark Games."
     }
+  },
+  "title": {
+    "touchStart": "Touch screen to start"
   }
 }
